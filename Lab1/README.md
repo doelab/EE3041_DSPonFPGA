@@ -63,7 +63,7 @@ The sample signals are 24-bit and located in [`samples`](./samples) folder. The 
 2. **Audio sample with high-pitched hissing noise** ([`audio.wav`](./samples/audio.wav), [`audio.hex`](./samples/audio.hex)): This audio is taken from the video *"[The Lost 1984 Video: young Steve Jobs introduces the Macintosh](https://youtu.be/2B-XwPjn9YY)"* and has a sample rate of 44.1 kHz, with a duration of 15 seconds. The audio that contains a high-frequency hissing sound. Your filter should target and remove this high-frequency noise while keeping the Steve Jobs's voice intact.
    Two Python scripts are provided in the [`utils`](./utils) folder to help you convert between `.wav` and `.hex` files. It's recommended that you review the scripts to understand how they work and make any necessary tweaks to suit your needs. Please note, I am not responsible if they don't work as expected.  ![](./images/audio_wave.png)
    
-3. **Noisy ECG signal** (`ecg.hex`): A typical ECG (electrocardiogram) signal with noise. The goal is to filter out the noise and recover the clean ECG waveform for accurate analysis.   ![](./images/ecg_wave.png)
+3. **Noisy ECG signal** ([`ecg.hex`](./samples/ecg.hex)): A typical ECG (electrocardiogram) signal with noise. The goal is to filter out the noise and recover the clean ECG waveform for accurate analysis.   ![](./images/ecg_wave.png)
 
 Use these signals to test your FIR filter design, ensuring it successfully removes the noisy components without distorting the essential parts of the signal.
 
