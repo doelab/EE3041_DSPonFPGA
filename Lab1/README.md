@@ -35,11 +35,11 @@ In digital systems, FIR filters are typically implemented using discrete-time co
 
 Below is an 8th-order direct form FIR filter. Generally, increasing the filter order (taps) improves the filter's performance by providing better signal filtering and more precise frequency response. However, when implementing such a design in hardware, the issue of timing becomes critical. Since each tap is implemented as a combinational element, the longer the chain, the more difficult it becomes to meet timing constraints, resulting in a lower maximum operating frequency.
 
-![[./images/fir_diagram.png]]
+![](./images/fir_diagram.png)
 
 To address this, pipelining techniques can be applied. By introducing pipeline stages between the taps, the combinational delay is reduced, allowing for higher clock frequencies and improved overall performance in the hardware implementation.
 
-![[./images/fir_pipelined_diagram.png]]
+![](./images/fir_pipelined_diagram.png)
 
 The above schematic is just an example of a pipelined FIR filter. You are not required to follow this design exactly and are encouraged to propose your own design approach. Feel free to explore different architectures or optimizations that suit your specific implementation and performance goals.
 
@@ -47,8 +47,8 @@ The above schematic is just an example of a pipelined FIR filter. You are not re
 
 In this lab assignment, you will design and simulate an FIR filter using Verilog or VHDL. Your task is to implement the FIR filter based on your specifications and verify its functionality through simulation. To assist you in this process (though you are welcome to use your own resources if preferred), the following resources are provided:
 
-- A **testbench** to simulate and verify the FIR filter design.
-- **Three input signal samples** to be used for testing the filter’s performance.
+- A **testbench** ([`FIR_tb.sv`](./FIR_tb.sv)) to simulate and verify the FIR filter design.
+- **Three input signal samples** ([`samples`](./samples)) to be used for testing the filter’s performance.
 
 Your primary goal is to complete the FIR filter design and verify its operation through simulation using the provided testbench and input signals. For extra credit, you can synthesize the design and demo it on an FPGA for real-time testing.
 
@@ -56,14 +56,14 @@ Your primary goal is to complete the FIR filter design and verify its operation 
 
 We provide you with three sample signals with a testbench to help you get started with your FIR filter design. The goal is for your design to effectively filter out the noisy components from each signal. You are encouraged to use MATLAB or Python to analyze the frequency components of these signals and determine which frequencies need to be filtered out. Additionally, you can use the "Filter Designer" application in MATLAB to assist in generating the appropriate filter coefficients.
 
-The sample signals are 24-bit and located in `samples` folder. The input and expected filtered signals are shown below. I believe you can achieve better results with your design and improvements. The provided sample signals include:
+The sample signals are 24-bit and located in [`samples`](./samples) folder. The input and expected filtered signals are shown below. I believe you can achieve better results with your design and improvements. The provided sample signals include:
 
-1. **Noisy sine waves** (`sine.hex`): A set of sine waves with added noise. Your filter should clean up the signal by removing the unwanted noise while preserving the sine wave.   ![[./images/sine_wave.png]]
+1. **Noisy sine waves** ([`sine.hex`](./samples/sine.hex)): A set of sine waves with added noise. Your filter should clean up the signal by removing the unwanted noise while preserving the sine wave.   ![](./images/sine_wave.png)
    
-2. **Audio sample with high-pitched hissing noise** (`audio.wav, audio.hex`): This audio is taken from the video "[The Lost 1984 Video: young Steve Jobs introduces the Macintosh](https://youtu.be/2B-XwPjn9YY)" and has a sample rate of 44.1 kHz, with a duration of 15 seconds. The audio that contains a high-frequency hissing sound. Your filter should target and remove this high-frequency noise while keeping the Steve Jobs's voice intact.
-   Two Python scripts are provided in the `utils` folder to help you convert between `.wav` and `.hex` files. It's recommended that you review the scripts to understand how they work and make any necessary tweaks to suit your needs. Please note, I am not responsible if they don't work as expected.  ![[./images/audio_wave.png]]
+2. **Audio sample with high-pitched hissing noise** ([`audio.wav`](./samples/audio.wav), [`audio.hex`](./samples/audio.hex)): This audio is taken from the video *"[The Lost 1984 Video: young Steve Jobs introduces the Macintosh](https://youtu.be/2B-XwPjn9YY)"* and has a sample rate of 44.1 kHz, with a duration of 15 seconds. The audio that contains a high-frequency hissing sound. Your filter should target and remove this high-frequency noise while keeping the Steve Jobs's voice intact.
+   Two Python scripts are provided in the [`utils`](./utils) folder to help you convert between `.wav` and `.hex` files. It's recommended that you review the scripts to understand how they work and make any necessary tweaks to suit your needs. Please note, I am not responsible if they don't work as expected.  ![](./images/audio_wave.png)
    
-3. **Noisy ECG signal** (`ecg.hex`): A typical ECG (electrocardiogram) signal with noise. The goal is to filter out the noise and recover the clean ECG waveform for accurate analysis.   ![[./images/ecg_wave.png]]
+3. **Noisy ECG signal** (`ecg.hex`): A typical ECG (electrocardiogram) signal with noise. The goal is to filter out the noise and recover the clean ECG waveform for accurate analysis.   ![](./images/ecg_wave.png)
 
 Use these signals to test your FIR filter design, ensuring it successfully removes the noisy components without distorting the essential parts of the signal.
 
