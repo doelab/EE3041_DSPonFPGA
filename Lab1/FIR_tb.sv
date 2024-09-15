@@ -1,18 +1,18 @@
 `timescale 1ns/1ns
 
-module FIR_tb;
-  localparam FILE_PATH = "org/sample/audio.hex";
+module FIR_tb ();
+  localparam FILE_PATH = "sample/sine.hex";
   localparam OUT_PATH  = "output.hex";
   localparam FREQ = 100_000_000;
 
-  localparam WD_IN  = 24;   // Data width
-  localparam WD_OUT  = 24;
-  localparam PERIOD = 1_000_000_000/FREQ;
-  localparam HALF_PERIOD = PERIOD/2;
+  localparam WD_IN       = 24                ; // Data width
+  localparam WD_OUT      = 24                ;
+  localparam PERIOD      = 1_000_000_000/FREQ;
+  localparam HALF_PERIOD = PERIOD/2          ;
 
   // Testbench signals
   reg               clk, reset_n;
-  reg  [WD_IN-1:0]  data_in;
+  reg  [ WD_IN-1:0] data_in ;
   wire [WD_OUT-1:0] data_out;
 
   integer file, status, outfile;
@@ -23,9 +23,9 @@ module FIR_tb;
 
   // Instantiate the FIR filter module
   FIR dut (
-    .clk(clk),
-    .reset_n(reset_n),
-    .data_in(data_in),
+    .clk     (clk     ),
+    .reset_n (reset_n ),
+    .data_in (data_in ),
     .data_out(data_out)
   );
 
@@ -40,16 +40,17 @@ module FIR_tb;
     data_in = 0;
 
     // Apply reset
-    #PERIOD reset_n = 1;  // Deassert reset after 10 time units
-    
+    #PERIOD reset_n = 1;  // Deassert reset after a period
+
     // Read hex file
     file = $fopen(FILE_PATH,"r");
-    outfile = $fopen("out.hex", "w");
-    if (file == 0) $error("data_in.hex not opened");
+    outfile = $fopen(OUT_PATH, "w");
+    if (file == 0)    $error("Hex file not opened");
+    if (outfile == 0) $error("Output file not opened");
     do begin
-      status = $fscanf(file,"%h",data_in);
+      status = $fscanf(file, "%h", data_in);
       @(posedge clk);
-      $fdisplay(outfile,"%h",data_out);
+      $fdisplay(outfile, "%h", data_out);
     end while (status != -1);
 
     // Wait for a while to observe output
@@ -60,8 +61,8 @@ module FIR_tb;
 
   // Monitor signals for debugging
   initial begin
-    $monitor("Time = %0t | Reset = %b | Data In = %h | Data Out = %h", 
-             $time, reset_n, data_in, data_out);
+    $monitor("Time = %0t | Reset = %b | Data In = %h | Data Out = %h",
+      $time, reset_n, data_in, data_out);
   end
 
 endmodule
