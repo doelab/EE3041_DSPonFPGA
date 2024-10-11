@@ -134,6 +134,18 @@ Your report should focus on quality rather than length. While it shouldn’t be 
 3. **How can we do the demonstration on FPGA?**  
    The guide has been updated for FPGA demonstration. You can follow the instructions in the updated guide for setting up your demo on the DE10 kit.
 
+4. **What is the format of the .hex file?**  
+   Each value in each line of the hex file is a signed 24-bit value in hexadecimal format. You can convert it to decimal and analyze it normally in MATLAB.
+
+5. **If multiplication is used, do I need to write out the multiplier, or can I just use the multiplication operator?**  
+   You can use the multiplication operator.
+
+6. **In my code, I use a for loop for calculations. Is that acceptable?**  
+   You can code in any way that works to get the simulation result. However, if you plan to synthesize the design onto the FPGA, the code must be synthesizable.
+
+7. **Is FPGA limited to a maximum of 33 taps?**  
+   When simulating, you can use as many taps as you like. When synthesizing and loading onto the FPGA kit, you need to be mindful of the resources on the DE10 and adjust the number of taps accordingly.
+
 ## How To Turn In Your Solution
 
 This semester we will be using LMS, simply submit the zip file with your reports and codes.
