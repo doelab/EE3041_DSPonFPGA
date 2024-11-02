@@ -35,10 +35,9 @@ We want to see you succeed, but you have to ask for help.
 
 Some part of the big project is **Simulation** only, however, your synthesis result on Quartus for the DE10 Kit still affects your credit, so code should be synthesizable to resources/timing.
 
-- Part 1: FIR Filter
-- Part 2: IIR Filter
-- Part 3: Wave Generator
-- Part 4: Oscilloscope
+- [Part 1: FIR Filter](./Lab1/README.md)
+- [Part 2: IIR Filter](./Lab2/README.md)
+- [Part 3: Audio Equalizer](./Lab3/README.md)
 
 ## How To Turn In Your Solution
 
