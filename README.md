@@ -4,7 +4,7 @@
 
 The big project contains many parts. This is for you to apply the knowledge surrounding the course to a real-world problem. You will be given a set of requirements and you will need to design, implement, and test a solution.
 
-This is a **group** project, to be done on your Altera DE10 board.
+This is a **group** project, to be done on DE10 Standard Development Kit (DE2 will **NOT** be accepted).
 
 Note: Do **NOT** use IP CATALOG for this lab.
 
@@ -35,8 +35,8 @@ We want to see you succeed, but you have to ask for help.
 
 Some part of the big project is **Simulation** only, however, your synthesis result on Quartus for the DE10 Kit still affects your credit, so code should be synthesizable to resources/timing.
 
-- [Part 1: FIR Filter](./Lab1/README.md)
-- [Part 2: IIR Filter](./Lab2/README.md)
+- [Part 1: Waveform Generator](./Lab1/README.md)
+- [Part 2: FIR and IIR Filters](./Lab2/README.md)
 - [Part 3: Audio Equalizer](./Lab3/README.md)
 
 ## How To Turn In Your Solution
