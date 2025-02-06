@@ -71,7 +71,7 @@ If you're aiming for a high grade, you’ll need to implement your design on the
 
 ## Reporting Requirements
 
-Your report should explain your design choices, simulations, and results. Ensure it includes clear evidence of your filter's performance, such as waveforms and graphs, and a detailed analysis of any issues encountered. For more details, refer to [Lab 1 - FIR Filter, Reporting Requirements](../Lab1/README.md/#reporting-requirements)#reporting-requirements)
+Your report should explain your design choices, simulations, and results. Ensure it includes clear evidence of your filter's performance, such as waveforms and graphs, and a detailed analysis of any issues encountered. For more details, refer to [Lab 2 - FIR and IIR Filters, Reporting Requirements](../Lab2/README.md/#reporting-requirements)
 
 ## How To Turn In Your Solution
 

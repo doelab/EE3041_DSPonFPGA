@@ -100,20 +100,12 @@ To showcase your waveform generator on the DE10 Standard Development Kit, your i
 ## Reporting Requirements
 
 Your report should be concise but detailed enough to clearly explain your design process, simulations, and results. Make sure to:
-- Include explanations of the design choices you made, particularly if you implemented a pipelined architecture or any optimizations.
 - Show clear evidence of how your generator performs with the provided input signals, including graphs or waveforms and analysis.
 - Include the synthesis report and analyze the results, such as resource utilization, timing constraints, and operating frequency.
 - Provide an image of the oscilloscope output if you successfully implemented the design on the FPGA.
 - If the filter doesn’t perform well, offer a detailed analysis of why the results are not as expected and propose improvements or solutions.
   
 Your report should focus on quality rather than length. While it shouldn’t be excessively long, it needs to be thorough and well-structured. Points will be deducted for poor reporting, such as missing key details, insufficient analysis, or unclear presentation. Make sure to present your work in a professional and readable format.
-
-## Frequently asked questions
-
-1. **Which tool do we need to use for this Lab?**  
-   For the DSP on FPGA lab, most tasks involve simulation. You can use tools such as **ModelSim/QuestaSim**, **Verilator**, **VCS+Verdi**, or **Xcelium**.  
-   - **QuestaSim** and **Verilator** are free and can be installed on your personal computer.  
-   - For **VCS+Verdi** or **Xcelium**, you can request access to the server from your instructor to use them.
 
 ## How To Turn In Your Solution
 

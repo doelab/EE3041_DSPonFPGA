@@ -1,4 +1,4 @@
-# Lab 2 - FIR and IIR Filter
+# Lab 2 - FIR and IIR Filters
 
 ## Objective
 
@@ -111,16 +111,13 @@ Your report should focus on quality rather than length. While it shouldn’t be 
 
 ## Frequently asked questions
 
-1. **How can we do the demonstration on FPGA?**  
-   The guide has been updated for FPGA demonstration. You can follow the instructions in the updated guide for setting up your demo on the DE10 kit.
-
-2. **If multiplication is used, do I need to write out the multiplier, or can I just use the multiplication operator?**  
+1. **If multiplication is used, do I need to write out the multiplier, or can I just use the multiplication operator?**  
    You can use the multiplication operator.
 
-3. **In my code, I use a for loop for calculations. Is that acceptable?**  
+2. **In my code, I use a for loop for calculations. Is that acceptable?**  
    You can code in any way that works to get the simulation result. However, if you plan to synthesize the design onto the FPGA, the code must be synthesizable.
 
-4. **Is FPGA limited to a maximum of 33 taps?**  
+3. **Is FPGA limited to a maximum of 33 taps?**  
    When simulating, you can use as many taps as you like. When synthesizing and loading onto the FPGA kit, you need to be mindful of the resources on the DE10 and adjust the number of taps accordingly.
 
 ## How To Turn In Your Solution
