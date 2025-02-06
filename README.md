@@ -33,8 +33,6 @@ We want to see you succeed, but you have to ask for help.
 
 ## Project Overview
 
-Some part of the big project is **Simulation** only, however, your synthesis result on Quartus for the DE10 Kit still affects your credit, so code should be synthesizable to resources/timing.
-
 - [Part 1: Waveform Generator](./Lab1/README.md)
 - [Part 2: FIR and IIR Filters](./Lab2/README.md)
 - [Part 3: Audio Equalizer](./Lab3/README.md)

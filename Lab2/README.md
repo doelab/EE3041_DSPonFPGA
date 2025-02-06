@@ -81,8 +81,11 @@ To achieve a high grade, you must implement your design on the FPGA using the DE
    - Process the noisy audio signal through your filters to produce a clean, filtered output.  
    - Play the filtered audio through a speaker to demonstrate the effectiveness of your filters.  
    - Choose an audio sample that clearly highlights the difference between the noisy and filtered versions. 
+   - You could use the 3.5mm to 3.5mm audio cable to connect the audio output of your laptop to the audio input of the DE10 board. The audio output of the DE10 board can be connected to a speaker.
+  
+   ![auxcable](./images/cable.png)
 
-   ![](./images/schem_audio.jpg) 
+   ![](./images/schem_audio.jpg)
 
 
 ## For Credit
